@@ -1,0 +1,16 @@
+<div class="content" transition:animate="slide">
+<slot/>
+</div>
+
+<style>
+	.content {
+		margin-left: 25vh;
+        height: 98vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-color: red rgba(0,0,0,0);
+        scrollbar-width: thin;
+	}
+</style>

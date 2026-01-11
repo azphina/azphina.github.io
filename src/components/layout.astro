@@ -1,0 +1,26 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Background from "./background.astro";
+import Content from "./content.astro";
+import NavWheel from "./navwheel.astro";
+const { color1 = "#311449", color2 = "#1d1347" } = Astro.props;
+---
+
+<html transition:name="root" transition:animate="none">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Margarine&display=swap"
+            rel="stylesheet"
+        />
+        <ClientRouter />
+    </head>
+    <body>
+        <Background color1={color1} color2={color2}/>
+        <NavWheel />
+        <Content>
+            <slot />
+        </Content>
+    </body>
+</html>

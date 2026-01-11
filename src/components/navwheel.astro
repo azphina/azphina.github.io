@@ -1,0 +1,50 @@
+<div class="navwheel">
+	<p>
+		<a href="/" id="home">Home</a>
+		<br />
+		<a href="/about" id="about">About</a>
+		<br />
+		<a href="/art" id="art">Art</a>
+		<br />
+		<a href="/music" id="music">Music</a>
+		<br />
+		<a href="/code" id="code">Program</a>
+		<br />
+		<a href="/contact" id="contact">Contact</a>
+		<br />
+	</p>
+</div>
+
+<style>
+	.navwheel {
+		height: 100%;
+		width: 100vh;
+		background-color: #aa3344;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: -75vh;
+	}
+	.navwheel p {
+		position: absolute;
+		top: 50%;
+		left: 75%;
+		font-size: 3.75vh;
+		transform: translate(0, -50%);
+		color: #f2eedc;
+		font-family: "Margarine", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		line-height: 2;
+	}
+
+	.navwheel p a {
+		transition: font-size 0.1s ease-out;
+		color: #f2eedc;
+		text-decoration: none;
+	}
+
+	.navwheel p a:hover {
+		font-size: 4vh;
+	}
+</style>

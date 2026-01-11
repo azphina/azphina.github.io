@@ -1,0 +1,23 @@
+---
+const { color1, color2 } = Astro.props;
+---
+<style define:vars={{ color1, color2 }}>
+	@keyframes bgScroll {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 10vh 10vh;
+		}
+	}
+
+	.bg {
+        position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+		background: repeating-conic-gradient(var(--color1) 0 25%, var(--color2) 0 50%) 50% / 10vh 10vh;
+        background-color: black;
+		animation: bgScroll 2s linear infinite;
+        z-index: -500;
+	}
+</style>
+
+<div class="bg"></div>
