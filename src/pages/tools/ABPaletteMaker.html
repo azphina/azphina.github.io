@@ -51,9 +51,16 @@
         image-rendering: pixelated;
         font-smooth: never;
         -webkit-font-smoothing : none;
-        width: 50%;
+        padding: 0;
+        margin: auto;
+        display: block;
+        width: 600px;
+        height: 500px;
         position: absolute;
+        top: 0;
+        bottom: 0;
         left: 0;
+        right: 0;
     }
 
     .editor {
@@ -64,6 +71,15 @@
         left: 50%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .preview {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        left: 0;
+        height: 100vh;
     }
 
     .colors {
@@ -154,7 +170,9 @@
         <p><img src="/images/abpalette/sp_cameo_jeotslay_idle_0.gif">Mr. Kalpso - Template</p>
         </div>
     </div>
+    <div class="preview">
     <canvas id="myCanvas" width="600" height="500"></canvas>
+    </div>
 </body>
 <script>
     //https://stackoverflow.com/questions/5026961/html5-canvas-ctx-filltext-wont-do-line-breaks
@@ -337,7 +355,7 @@
     let imgDataL;
     let imgDataR;
 
-    let mode = 1;
+    let mode = 0;
 
     templateA.onload = function () {
         context.drawImage(templateA, 0, 0);
